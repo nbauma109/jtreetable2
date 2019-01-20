@@ -76,7 +76,7 @@ public class FileSystemModel2 extends AbstractTreeTableModel {
     public static final Integer      ZERO = new Integer(0); 
 
     /** An array of MergeSorter sorters, that will sort based on size. */
-    static Stack      sorters = new Stack();
+    static Stack<MergeSort>      sorters = new Stack<MergeSort>();
 
 
     /** True if the receiver is valid, once set to false all Threads
@@ -184,7 +184,7 @@ public class FileSystemModel2 extends AbstractTreeTableModel {
     /**
      * Returns the class for the particular column.
      */
-    public Class getColumnClass(int column) {
+    public Class<?> getColumnClass(int column) {
 	return cTypes[column];
     }
 
